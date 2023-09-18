@@ -1,0 +1,17 @@
+var, let, const
+simple variables (string, numbers, boolean)
+objects
+arrays
+for, while loop
+general functions
+function parameter + return types
+static functions
+Anonymous functions
+Arrow functions
+classes
+class inheritance
+HTTP requests (GET, POST, PUT, DELETE)
+Async functions
+Promises
+Prototypes
+Bitwise Operators
