@@ -37,3 +37,12 @@ function test1() {
   test4.message = "test 9";
   console.log(test4.message);
 }
+
+function test2() {
+  test5 = "hallo"; // Das ist ein String da jeder String nur aus buchstaben bestehen kann und zeichen also alles außer zahlen
+  console.log(test5);
+  test6 = "12"; // Number ist der Variablen typ für alle Zahlen
+  console.log(test6);
+  test7 = true;
+  console.log(test7); // Bolean ist der Variablen typ für die Werte true und false
+}
