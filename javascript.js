@@ -154,3 +154,36 @@ function test7() {
     console.log(person.firstName + " " + person.lastName);
   })(person);
 }
+
+// Aufgabe 8
+
+function test8() {
+  let addieren = function (a, b) {
+    return a + b;
+  };
+  let ergebnis2 = addieren(5, 6);
+  console.log(ergebnis2); // oder  console.log(addieren(5, 6));
+
+  const dividieren = (a, b) => a - b; // Arrow function
+  console.log(dividieren(6, 7));
+}
+
+// Aufgabe 10,11 und 12
+
+function test9() {
+  //classes
+  class Auto {
+    constructor(marke, model, price) {
+      this.marke = marke;
+      this.model = model;
+      this.price = price;
+    }
+
+    showPrice() {
+      console.log(`Price of ${this.marke} ${this.model} is ${this.price}`);
+    }
+  }
+
+  const pen1 = new Auto("Mercedes", "C63", "$300000");
+  pen1.showPrice();
+}

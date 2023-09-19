@@ -5,14 +5,11 @@ arrays
 for, while loop
 general functions
 function parameter + return types
-
 Anonymous functions
 Arrow functions
 classes
 static functions
 class inheritance
-HTTP requests (GET, POST, PUT, DELETE)
-Async functions
 Promises
-Prototypes
-Bitwise Operators
+Async functions
+HTTP requests (GET, POST, PUT, DELETE)
