@@ -91,3 +91,13 @@ function test4() {
   Auto.push("Mercedes");
   console.log(Auto);
 }
+
+// Aufgabe 5
+function test5() {
+  const lolis = [];
+  for (let i = 0; i <= 10; i++) {
+    // etwas bestimmt lang ausführen
+    lolis.push(i);
+    console.log(lolis);
+  }
+}
