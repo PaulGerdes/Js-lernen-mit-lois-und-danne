@@ -101,17 +101,33 @@ function test5() {
     console.log(lolis);
   }
 
-  var j = 0;              //mit while kann man wie der name shcon sagt einee schleife so lange ausführen solange die Vorraussetzungen erfüllt sind  
+  var j = 0; //mit while kann man wie der name shcon sagt einee schleife so lange ausführen solange die Vorraussetzungen erfüllt sind
   while (j < 10) {
     j++;
     console.log("test");
   }
 }
 
-// Aufgabe 6 
-function test6(){
-  let x = AmitBrechnen(10, 5);
+// Aufgabe 6
+function test6() {
+  const lolis = [];
+  for (let i = 0; i <= 10; i++) {
+    // etwas bestimmt lang ausführen
+    lolis.push(i);
+    console.log(lolis);
+  }
 
-  function AmitBrechnen(a, b)
-  return a+b;
+  let x = amitBrechnen(lolis[5], lolis[7]); // funktion um die Zahlen 10,5 zu verrechnen aber in einer funktion
+  console.log(x);
+
+  function amitBrechnen(a, b) {
+    return a + b;
+  }
+
+  let zahl = 5; // rechner um eine zahl durch sich slebst zu rechnen
+  function durchsichselber(zahl) {
+    return zahl / zahl;
+  }
+  let ergebnis = durchsichselber(zahl);
+  console.log(ergebnis);
 }
