@@ -38,6 +38,8 @@ function test1() {
   console.log(test4.message);
 }
 
+//Aufgabe 2
+
 function test2() {
   test5 = "hallo"; // Das ist ein String da jeder String nur aus buchstaben bestehen kann und zeichen also alles außer zahlen
   console.log(test5);
@@ -45,4 +47,44 @@ function test2() {
   console.log(test6);
   test7 = true;
   console.log(test7); // Bolean ist der Variablen typ für die Werte true und false
+}
+
+// Aufgabe 3
+
+function test3() {
+  const id3 = {
+    // Variable id3 declariert als const mit einem Object
+    Marke: "VW", // Object enthält mehrere werte welche jetzt einzelt ausgelesen und bearbeitet werden können
+    Model: "ID3",
+  };
+  console.log(id3.Marke, id3.Model);
+  id3.Marke = "BMW"; // ändern eines einzelnes objects in id3
+  console.log(id3.Marke);
+}
+
+//Aufgabe 4
+
+function test4() {
+  const Auto = ["bmw", "Audi", "VW"]; // Array erstellen
+  console.log(Auto);
+
+  Auto[4] = "Porsche"; // Manuell dem Array etwas hinzufügen
+  console.log(Auto[4]);
+  Auto[4] = "Ferrari"; // mit der selben Art ein Array inhalt ändern
+  Auto[3] = "Mclaren";
+  schnellesAuto = Auto[4]; // Auf Array zugreifen und auslesen
+  console.log(schnellesAuto);
+
+  AlleAuto = Auto.toString(); // Array in einen String Konvertieren
+  console.log(AlleAuto);
+
+  AnzahlAutos = Auto.length; //Zeigt die Anzahl aller Autos in dem Array
+  console.log(AnzahlAutos);
+  // Mit Auto.sort; kann man das Array Sortieren
+
+  let schnellesauto = Auto[Auto.length - 1]; // letzdes object des Array auswählen
+  console.log(schnellesauto);
+
+  Auto.push("Mercedes");
+  console.log(Auto);
 }
