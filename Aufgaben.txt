@@ -5,10 +5,11 @@ arrays
 for, while loop
 general functions
 function parameter + return types
-static functions
+
 Anonymous functions
 Arrow functions
 classes
+static functions
 class inheritance
 HTTP requests (GET, POST, PUT, DELETE)
 Async functions

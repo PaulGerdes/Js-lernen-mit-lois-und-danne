@@ -131,3 +131,26 @@ function test6() {
   let ergebnis = durchsichselber(zahl);
   console.log(ergebnis);
 }
+
+// Aufgabe 7
+function test7() {
+  let zeigen = function () {
+    console.log("unsichtbare Funktion-- Anonymous function");
+  };
+  zeigen();
+
+  setTimeout(function () {
+    // diese function hängt eine 1secunde hinterher (delay)
+    console.log("Execute later after 1 second");
+  }, 1000);
+
+  let person = {
+    // Anonyme Funktion um die beiden objekte zusammen zu führen und auszugeben
+    firstName: "danne",
+    lastName: "loius",
+  };
+
+  (function () {
+    console.log(person.firstName + " " + person.lastName);
+  })(person);
+}
