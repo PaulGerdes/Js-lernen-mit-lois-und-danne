@@ -106,10 +106,12 @@ function test5() {
     j++;
     console.log("test");
   }
-
-  loop(){
-
-  }
 }
 
 // Aufgabe 6 
+function test6(){
+  let x = AmitBrechnen(10, 5);
+
+  function AmitBrechnen(a, b)
+  return a+b;
+}
