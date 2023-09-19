@@ -100,4 +100,16 @@ function test5() {
     lolis.push(i);
     console.log(lolis);
   }
+
+  var j = 0;              //mit while kann man wie der name shcon sagt einee schleife so lange ausführen solange die Vorraussetzungen erfüllt sind  
+  while (j < 10) {
+    j++;
+    console.log("test");
+  }
+
+  loop(){
+
+  }
 }
+
+// Aufgabe 6 
