@@ -41,6 +41,9 @@ function test1() {
 //Aufgabe 2
 
 function test2() {
+  let test5;
+  let test6;
+  let test7;
   test5 = "hallo"; // Das ist ein String da jeder String nur aus buchstaben bestehen kann und zeichen also alles außer zahlen
   console.log(test5);
   test6 = "12"; // Number ist der Variablen typ für alle Zahlen
@@ -54,12 +57,12 @@ function test2() {
 function test3() {
   const id3 = {
     // Variable id3 declariert als const mit einem Object
-    Marke: "VW", // Object enthält mehrere werte welche jetzt einzelt ausgelesen und bearbeitet werden können
-    Model: "ID3",
+    marke: "VW", // Object enthält mehrere werte welche jetzt einzelt ausgelesen und bearbeitet werden können
+    model: "ID3",
   };
-  console.log(id3.Marke, id3.Model);
-  id3.Marke = "BMW"; // ändern eines einzelnes objects in id3
-  console.log(id3.Marke);
+  console.log(id3.marke, id3.model);
+  id3.marke = "BMW"; // ändern eines einzelnes objects in id3
+  console.log(id3.marke);
 }
 
 //Aufgabe 4
