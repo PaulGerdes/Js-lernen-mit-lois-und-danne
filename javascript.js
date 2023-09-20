@@ -234,3 +234,32 @@ function test9() {
   const Filzstift1 = new Filzstifte("filzstift", "9", "10cm");
   Filzstift1.filzstiftWerbung();
 }
+
+// Promises
+
+function test10() {
+  let myPromise = new Promise(function (myResolve, myReject) {
+    let x = 0;
+
+    // some code (try to change x to 5)
+
+    if (x == 0) {
+      myResolve("OK");
+    } else {
+      myReject("Error");
+    }
+  });
+
+  myPromise.then(
+    function (value) {
+      console.log(value);
+    },
+    function (error) {
+      console.log(error);
+    }
+  );
+}
+
+// Async functions
+
+function Async() {}
