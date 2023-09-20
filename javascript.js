@@ -173,7 +173,9 @@ function test8() {
 function test9() {
   //classes
   class Auto {
+    // Klasse Definieren
     constructor(marke, model, price) {
+      // Constructor änlich wie parameter bei funktionen
       this.marke = marke;
       this.model = model;
       this.price = price;
@@ -184,6 +186,51 @@ function test9() {
     }
   }
 
-  const pen1 = new Auto("Mercedes", "C63", "$300000");
-  pen1.showPrice();
+  const car = new Auto("Mercedes", "C63", "$300000"); // funktion show Price aus der Klasse ausführen aber mit den Parametern von der Funktion ( constructor zum einsetzen)
+
+  car.showPrice();
+
+  // Static Methods
+
+  class Stift {
+    constructor(art, preis) {
+      this.art = art;
+      this.preis = preis;
+    }
+
+    StiftWerbung() {
+      console.log(
+        "Der " +
+          this.art +
+          "Stift ist ein sehr günstiger stift mit " +
+          this.preis +
+          " €"
+      );
+    }
+  }
+  const stift1 = new Stift("supermaler", "3");
+  stift1.StiftWerbung();
+
+  // Class Inheritance
+
+  class Filzstifte extends Stift {
+    constructor(art, preis, dicke) {
+      super(art, preis); // Super muss ein Parameter haben. Dieser gibt an welche Parameter aus dem Parent Constructor importiert werden sollen
+      this.dicke = dicke;
+    }
+
+    filzstiftWerbung() {
+      console.log(
+        "Der " +
+          this.art +
+          "Stift ist ein sehr günstiger stift mit " +
+          this.preis +
+          " €. Er ist " +
+          this.dicke +
+          " dick"
+      );
+    }
+  }
+  const Filzstift1 = new Filzstifte("filzstift", "9", "10cm");
+  Filzstift1.filzstiftWerbung();
 }
