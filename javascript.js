@@ -299,13 +299,13 @@ function test12() {
       console.log(posts.map((post) => post.title).join(", "));
     });
 
-  //push
+  //Post
   fetch("https://jsonplaceholder.typicode.com/posts", {
     method: "POST",
     body: JSON.stringify({
       title: "foo",
       body: "bar",
-      userId: 1,
+      userId: 5,
     }),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
@@ -360,4 +360,15 @@ function test12() {
   fetch("https://jsonplaceholder.typicode.com/posts/1/comments") // 1/comments ist das gleiche wie /comments?postId=1
     .then((response) => response.json())
     .then((json) => console.log(json));
+}
+
+function Bildgetten() {
+  const Bildinfos = [];
+  fetch("https://jsonplaceholder.typicode.com/photos")
+    .then((response) => response.json())
+    .then((posts) => {
+      console.log(posts.map((post) => post.url).join(", "));
+    });
+
+  console.log(Bildgetten);
 }
