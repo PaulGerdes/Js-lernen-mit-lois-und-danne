@@ -286,3 +286,15 @@ function test11() {
 
   f().then(alert); // 1
 }
+
+// HTTP requests
+
+function test12() {
+  // Get
+  const TestApi = [];
+  var url = "https://jsonplaceholder.typicode.com/posts/1";
+  fetch(url)
+    .then((Response) => Response.json())
+    .then((json) => TestApi.push(json));
+  console.log(TestApi);
+}
