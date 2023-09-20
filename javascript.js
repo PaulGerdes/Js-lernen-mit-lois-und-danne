@@ -369,6 +369,4 @@ function Bildgetten() {
     .then((posts) => {
       console.log(posts.map((post) => post.url).join(", "));
     });
-
-  console.log(Bildgetten);
 }
