@@ -363,10 +363,18 @@ function test12() {
 }
 
 function Bildgetten() {
-  const Bildinfos = [];
+  let Bildinfos = [];
+  let Bildinfosstring;
   fetch("https://jsonplaceholder.typicode.com/photos")
     .then((response) => response.json())
     .then((posts) => {
       console.log(posts.map((post) => post.url).join(", "));
+      Bildinfos.push(posts.map((post) => post.url));
+      Bildinfos = Bildinfos[0];
+      console.log(Bildinfos);
     });
 }
+
+//for (let i = 0; i < Bildinfos[0].length; i++) {
+//  Bildinfos.push(Bildinfos[0][i]);
+//}
