@@ -262,4 +262,27 @@ function test10() {
 
 // Async functions
 
-function Async() {}
+function test11() {
+  async function myFunction() {
+    throw new Error();
+  }
+  myFunction()
+    .then(function (value) {
+      console.log(value);
+    })
+    .catch(() => console.log("ERROR"));
+
+  async function f() {
+    // Das ist das selbe wie die funktion unten
+    return 1;
+  }
+
+  f().then(alert); // 1
+
+  async function f() {
+    // Das ist das selbe wie die funktion oben
+    return 1;
+  }
+
+  f().then(alert); // 1
+}
