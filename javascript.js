@@ -291,13 +291,73 @@ function test11() {
 
 function test12() {
   // Get
-  let testApi = [];
-  for (let i = "1"; i < 12; i++) {
-    var url = "https://jsonplaceholder.typicode.com/posts/" + i;
-    fetch(url)
-      .then((response) => response.json())
-      .then((posts) => (testApi = posts));
-  }
+  const testApi = [];
+  const url = "https://jsonplaceholder.typicode.com/posts";
+  fetch(url)
+    .then((response) => response.json())
+    .then((posts) => {
+      console.log(posts.map((post) => post.title).join(", "));
+    });
 
-  console.log(testApi[0].title);
+  //push
+  fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    body: JSON.stringify({
+      title: "foo",
+      body: "bar",
+      userId: 1,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+
+  //put
+
+  fetch("https://jsonplaceholder.typicode.com/posts/1", {
+    method: "PUT",
+    body: JSON.stringify({
+      id: 1,
+      title: "foo",
+      body: "bar",
+      userId: 1,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+
+  //Patch
+
+  fetch("https://jsonplaceholder.typicode.com/posts/1", {
+    method: "PATCH",
+    body: JSON.stringify({
+      title: "foo",
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+
+  // Delete
+
+  fetch("https://jsonplaceholder.typicode.com/posts/1", {
+    method: "DELETE",
+  });
+
+  // Filtern
+  fetch("https://jsonplaceholder.typicode.com/posts?userId=1") // Filtert die Recoursen nach den usern
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+
+  // Filtern in Children recoursen
+  fetch("https://jsonplaceholder.typicode.com/posts/1/comments") // 1/comments ist das gleiche wie /comments?postId=1
+    .then((response) => response.json())
+    .then((json) => console.log(json));
 }
