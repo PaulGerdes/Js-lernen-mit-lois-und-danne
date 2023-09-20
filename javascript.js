@@ -291,13 +291,13 @@ function test11() {
 
 function test12() {
   // Get
-  const TestApi = [];
+  let testApi = [];
   for (let i = "1"; i < 12; i++) {
     var url = "https://jsonplaceholder.typicode.com/posts/" + i;
     fetch(url)
-      .then((Response) => Response.json())
-      .then((json) => TestApi.push(json));
+      .then((response) => response.json())
+      .then((posts) => (testApi = posts));
   }
 
-  console.log(TestApi);
+  console.log(testApi[0].title);
 }
