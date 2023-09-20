@@ -292,9 +292,12 @@ function test11() {
 function test12() {
   // Get
   const TestApi = [];
-  var url = "https://jsonplaceholder.typicode.com/posts/1";
-  fetch(url)
-    .then((Response) => Response.json())
-    .then((json) => TestApi.push(json));
+  for (let i = "1"; i < 12; i++) {
+    var url = "https://jsonplaceholder.typicode.com/posts/" + i;
+    fetch(url)
+      .then((Response) => Response.json())
+      .then((json) => TestApi.push(json));
+  }
+
   console.log(TestApi);
 }
